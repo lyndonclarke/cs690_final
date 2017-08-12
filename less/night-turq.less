@@ -1,0 +1,169 @@
+
+//feel 
+
+@dash-background: #192223;
+@table-text: #4fb3b7;
+@table-head-background: #273332;
+@table-body-background: #111818;
+@table-highlight-fill: #0b6e74;
+
+
+body { 
+  /*#191D1E;*/
+  /*#192223;*/
+  /*#192223;*/
+
+  background-color: @dash-background;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  z-index: 10;
+}
+
+
+
+.dash-box {
+  display: flex;
+  flex-direction: row;
+  align-content: left;
+  justify-content: left;
+  width: 100%;
+  top: 15px;
+  left: 0px;
+}
+
+.sunburst-box {
+  padding-top: 2vw;
+  right: 0vw;
+  .sbrst {
+    z-index: 150;
+    stroke: none;
+    stroke-width: 0px;
+    box-shadow: 0 -4px 2px -2px rgba(0,0,0,0.4);
+  }
+  path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+  }
+}
+
+
+
+
+
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  margin-right: 2vw;
+  margin-top: 3vh;
+  margin-left: 2vw;
+  color: @table-text;
+  background-color: @table-body-background;
+  table{
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .city-select-container {
+    background-color: @table-head-background;
+    width: 40vw;
+    height: 50px;
+    .city-button-box {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      .city-button {
+        width: 25%;
+        white-space:nowrap;
+        top:0px;
+        border-radius:4px;
+        position:relative;
+        border:none;
+        width: 25%;
+        height: 100%;
+        cursor:pointer;
+        transition:0.1s all ease;
+        font-size : 16px;
+        font-weight: 300;
+        color:#777;
+        border-bottom: 1px solid #ccc;
+        box-shadow:0px 0px 0px 0px #B8B8B8;
+        border-bottom: 1px solid #5e5e5e;
+        background: #a1a1a1
+      }
+      .city-button:active{
+        top:0px;
+        height:50px;
+        border: 1px solid #727272;
+        background-color:#8e8e8e;
+        box-shadow: inset 0px 0px 4px rgba(0,0,0,0.15);
+      }
+      .city-button:hover{ 
+        background-color:#f5f5f5;
+        top:-2px;
+        height:52px;
+        border-bottom: 4px solid #ccc;
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+      }
+    }
+  }
+  .date-range-container{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  th{
+    background-color: @table-head-background;
+    padding: 20px 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  td{
+    padding: 15px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .chart-box {
+    width: 40vw;
+    height: 45vh;
+    fill: @table-highlight-fill;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    .axis {
+      font-size: 16px;
+      color: @table-highlight-fill;
+    }
+    g {
+      .bar {
+        fill: @table-highlight-fill;
+      }
+      .tick {
+        text {
+          color: @table-highlight-fill; 
+          fill: @table-highlight-fill;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+
+
